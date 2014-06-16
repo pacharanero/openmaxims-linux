@@ -18,7 +18,7 @@ a fork of openMAXIMS open EPR/ADT/order-comms project, adapted to compile in a l
 		* `#! /bin/bash`
 		* `cd ./openmaxims_workspace/WebApp`
 		* `ant -f WebAppBuild.xml`
-	*renamed to build_openMAXIMS.sh
+	* renamed to build_openMAXIMS.sh
 * saved /home/marcus/VMs/imsmaxims-vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/Admin/src/ims/admin/helper/Keywords.java in UTF-8 encoding
 * realised there might be a lot more UTF-8 re-encoding required as other compiler error messages came in, therefore I put the whole lot into version control
 * <deep breath />
