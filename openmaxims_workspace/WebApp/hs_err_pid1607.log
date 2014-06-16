@@ -1,0 +1,358 @@
+#
+# An unexpected error has been detected by HotSpot Virtual Machine:
+#
+#  SIGSEGV (0xb) at pc=0x00007f5c2d29b487, pid=1607, tid=140032100034304
+#
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (1.5.0_22-b03 mixed mode)
+# Problematic frame:
+# C  [libzip.so+0xb487]
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000004103c780):  JavaThread "Thread-0" [_thread_in_native, id=1619]
+
+siginfo:si_signo=11, si_errno=0, si_code=1, si_addr=0x00007f5c21d743c8
+
+Registers:
+RAX=0x00000000000443c7, RBX=0x00007f5bbc005530, RCX=0x000000000000004d, RDX=0x0000000000000002
+RSP=0x00007f5bc39431c0, RBP=0x00007f5bc39431f0, RSI=0x00007f5bbc02f810, RDI=0x00007f5bbc005530
+R8 =0x0000000000000000, R9 =0x0000000000000003, R10=0x000000004103fc40, R11=0x000000004103ca40
+R12=0x00007f5c21d743c7, R13=0x00007f5bbc02f810, R14=0x0000000000000000, R15=0x00007f5bc3943260
+RIP=0x00007f5c2d29b487, EFL=0x0000000000010283, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f5bc39431c0)
+0x00007f5bc39431c0:   00007f5bc39431e0 00007f5bbc02f810
+0x00007f5bc39431d0:   00007f5bbc005530 0000000000000000
+0x00007f5bc39431e0:   000000008198ac89 00007f5bc3943260
+0x00007f5bc39431f0:   00007f5bc3943230 00007f5c2d29b8cb
+0x00007f5bc3943200:   000000274103c780 00007f5bc3943260
+0x00007f5bc3943210:   000000004103c8d0 0000000000000027
+0x00007f5bc3943220:   00007f5bc3943730 0000000000000027
+0x00007f5bc3943230:   00007f5bc39436a0 00007f5c2d2938a8
+0x00007f5bc3943240:   00007f5bc3943250 00007f5bc3943260
+0x00007f5bc3943250:   01007f5bc3943260 00007f5bbc005530
+0x00007f5bc3943260:   562f6f762f736d69 656a624f65756c61
+0x00007f5bc3943270:   43646578694d7463 6f697463656c6c6f
+0x00007f5bc3943280:   007373616c632e6e 00007f5c2e40900a
+0x00007f5bc3943290:   00007f5bc39432c0 00007f5c2e444dc7
+0x00007f5bc39432a0:   000000004103c7f0 000000000000000d
+0x00007f5bc39432b0:   0000000040f4eb10 000000004103c7f0
+0x00007f5bc39432c0:   00007f5bc3943300 000000004103c780
+0x00007f5bc39432d0:   000000000000000d 000000000000000d
+0x00007f5bc39432e0:   00007f5bf5216c48 00007f5c21e60700
+0x00007f5bc39432f0:   00007f5bc3943330 00007f5c2e3579e0
+0x00007f5bc3943300:   00007f5bc3943330 000000000000000d
+0x00007f5bc3943310:   00007f5bf5216c48 000000004103c780
+0x00007f5bc3943320:   0000000000000027 000000004103ce58
+0x00007f5bc3943330:   00007f5bc3943370 00007f5c2e7644d3
+0x00007f5bc3943340:   000000004103ce58 00007f5bc3943750
+0x00007f5bc3943350:   000000004103c780 0000000000000027
+0x00007f5bc3943360:   0000000000000000 000000004103c780
+0x00007f5bc3943370:   00007f5bc3943380 00007f5c2e685e8b
+0x00007f5bc3943380:   00007f5bc39436b0 00007f5c2e6e854c
+0x00007f5bc3943390:   00007f5bf5216ab8 00800000000057f1
+0x00007f5bc39433a0:   000000000043e4b9 00007f5bf5216aa0
+0x00007f5bc39433b0:   00007f5c1ef49150 000000000002bf88 
+
+Instructions: (pc=0x00007f5c2d29b487)
+0x00007f5c2d29b477:   65 e0 4c 8b 6d e8 4c 8b 75 f0 4c 8b 7d f8 c9 c3
+0x00007f5c2d29b487:   41 0f b6 44 24 01 41 0f b6 0c 24 41 0f b6 54 24 
+
+Stack: [0x00007f5bc3546000,0x00007f5bc3947000),  sp=0x00007f5bc39431c0,  free space=4084k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libzip.so+0xb487]
+C  [libzip.so+0xb8cb]  ZIP_GetEntry+0x10b
+C  [libzip.so+0x38a8]  Java_java_util_zip_ZipFile_getEntry+0x98
+j  java.util.zip.ZipFile.getEntry(JLjava/lang/String;Z)J+0
+j  java.util.zip.ZipFile.getEntry(Ljava/lang/String;)Ljava/util/zip/ZipEntry;+31
+j  com.sun.tools.javac.jvm.ClassReader.list(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Lcom/sun/tools/javac/code/Symbol$PackageSymbol;)V+161
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  java.util.zip.ZipFile.getEntry(JLjava/lang/String;Z)J+0
+j  java.util.zip.ZipFile.getEntry(Ljava/lang/String;)Ljava/util/zip/ZipEntry;+31
+j  com.sun.tools.javac.jvm.ClassReader.list(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Lcom/sun/tools/javac/code/Symbol$PackageSymbol;)V+161
+v  ~C2IAdapter
+J  com.sun.tools.javac.jvm.ClassReader.listAll(Ljava/util/Collection;Ljava/lang/String;[Ljava/lang/String;Lcom/sun/tools/javac/code/Symbol$PackageSymbol;)V
+v  ~I2CAdapter
+j  com.sun.tools.javac.jvm.ClassReader.fillIn(Lcom/sun/tools/javac/code/Symbol$PackageSymbol;)V+113
+j  com.sun.tools.javac.jvm.ClassReader.complete(Lcom/sun/tools/javac/code/Symbol;)V+56
+j  com.sun.tools.javac.code.Symbol.complete()V+19
+j  com.sun.tools.javac.code.Symbol$PackageSymbol.flags()J+8
+j  com.sun.tools.javac.comp.Attr.checkId(Lcom/sun/tools/javac/tree/Tree;Lcom/sun/tools/javac/code/Type;Lcom/sun/tools/javac/code/Symbol;Lcom/sun/tools/javac/comp/Env;ILcom/sun/tools/javac/code/Type;Z)Lcom/sun/tools/javac/code/Type;+697
+j  com.sun.tools.javac.comp.Attr.visitSelect(Lcom/sun/tools/javac/tree/Tree$Select;)V+747
+j  com.sun.tools.javac.tree.Tree$Select.accept(Lcom/sun/tools/javac/tree/Tree$Visitor;)V+2
+j  com.sun.tools.javac.comp.Attr.attribTree(Lcom/sun/tools/javac/tree/Tree;Lcom/sun/tools/javac/comp/Env;ILcom/sun/tools/javac/code/Type;)Lcom/sun/tools/javac/code/Type;+36
+j  com.sun.tools.javac.comp.Attr.visitSelect(Lcom/sun/tools/javac/tree/Tree$Select;)V+107
+j  com.sun.tools.javac.tree.Tree$Select.accept(Lcom/sun/tools/javac/tree/Tree$Visitor;)V+2
+j  com.sun.tools.javac.comp.Attr.attribTree(Lcom/sun/tools/javac/tree/Tree;Lcom/sun/tools/javac/comp/Env;ILcom/sun/tools/javac/code/Type;)Lcom/sun/tools/javac/code/Type;+36
+j  com.sun.tools.javac.comp.Attr.attribType(Lcom/sun/tools/javac/tree/Tree;Lcom/sun/tools/javac/comp/Env;)Lcom/sun/tools/javac/code/Type;+7
+j  com.sun.tools.javac.comp.Attr.attribBase(Lcom/sun/tools/javac/tree/Tree;Lcom/sun/tools/javac/comp/Env;ZZZ)Lcom/sun/tools/javac/code/Type;+3
+j  com.sun.tools.javac.comp.MemberEnter.complete(Lcom/sun/tools/javac/code/Symbol;)V+217
+j  com.sun.tools.javac.code.Symbol.complete()V+19
+j  com.sun.tools.javac.code.Symbol$ClassSymbol.complete()V+1
+j  com.sun.tools.javac.code.Symbol$ClassSymbol.flags()J+8
+j  com.sun.tools.javac.comp.Resolve.isAccessible(Lcom/sun/tools/javac/comp/Env;Lcom/sun/tools/javac/code/Symbol$TypeSymbol;)Z+1
+j  com.sun.tools.javac.comp.Resolve.loadClass(Lcom/sun/tools/javac/comp/Env;Lcom/sun/tools/javac/util/Name;)Lcom/sun/tools/javac/code/Symbol;+12
+j  com.sun.tools.javac.comp.Resolve.findIdentInPackage(Lcom/sun/tools/javac/comp/Env;Lcom/sun/tools/javac/code/Symbol$TypeSymbol;Lcom/sun/tools/javac/util/Name;I)Lcom/sun/tools/javac/code/Symbol;+56
+j  com.sun.tools.javac.comp.Attr.selectSym(Lcom/sun/tools/javac/tree/Tree$Select;Lcom/sun/tools/javac/code/Type;Lcom/sun/tools/javac/comp/Env;Lcom/sun/tools/javac/code/Type;I)Lcom/sun/tools/javac/code/Symbol;+89
+j  com.sun.tools.javac.comp.Attr.visitSelect(Lcom/sun/tools/javac/tree/Tree$Select;)V+338
+j  com.sun.tools.javac.tree.Tree$Select.accept(Lcom/sun/tools/javac/tree/Tree$Visitor;)V+2
+j  com.sun.tools.javac.comp.Attr.attribTree(Lcom/sun/tools/javac/tree/Tree;Lcom/sun/tools/javac/comp/Env;ILcom/sun/tools/javac/code/Type;)Lcom/sun/tools/javac/code/Type;+36
+j  com.sun.tools.javac.comp.Attr.attribType(Lcom/sun/tools/javac/tree/Tree;Lcom/sun/tools/javac/comp/Env;)Lcom/sun/tools/javac/code/Type;+7
+j  com.sun.tools.javac.comp.Attr.attribBase(Lcom/sun/tools/javac/tree/Tree;Lcom/sun/tools/javac/comp/Env;ZZZ)Lcom/sun/tools/javac/code/Type;+3
+j  com.sun.tools.javac.comp.MemberEnter.complete(Lcom/sun/tools/javac/code/Symbol;)V+217
+j  com.sun.tools.javac.code.Symbol.complete()V+19
+j  com.sun.tools.javac.code.Symbol$ClassSymbol.complete()V+1
+j  com.sun.tools.javac.code.Symbol$ClassSymbol.flags()J+8
+j  com.sun.tools.javac.comp.Resolve.isAccessible(Lcom/sun/tools/javac/comp/Env;Lcom/sun/tools/javac/code/Symbol$TypeSymbol;)Z+1
+j  com.sun.tools.javac.comp.Resolve.loadClass(Lcom/sun/tools/javac/comp/Env;Lcom/sun/tools/javac/util/Name;)Lcom/sun/tools/javac/code/Symbol;+12
+j  com.sun.tools.javac.comp.Resolve.findIdentInPackage(Lcom/sun/tools/javac/comp/Env;Lcom/sun/tools/javac/code/Symbol$TypeSymbol;Lcom/sun/tools/javac/util/Name;I)Lcom/sun/tools/javac/code/Symbol;+56
+j  com.sun.tools.javac.comp.Attr.selectSym(Lcom/sun/tools/javac/tree/Tree$Select;Lcom/sun/tools/javac/code/Type;Lcom/sun/tools/javac/comp/Env;Lcom/sun/tools/javac/code/Type;I)Lcom/sun/tools/javac/code/Symbol;+89
+j  com.sun.tools.javac.comp.Attr.visitSelect(Lcom/sun/tools/javac/tree/Tree$Select;)V+338
+j  com.sun.tools.javac.tree.Tree$Select.accept(Lcom/sun/tools/javac/tree/Tree$Visitor;)V+2
+j  com.sun.tools.javac.comp.Attr.attribTree(Lcom/sun/tools/javac/tree/Tree;Lcom/sun/tools/javac/comp/Env;ILcom/sun/tools/javac/code/Type;)Lcom/sun/tools/javac/code/Type;+36
+j  com.sun.tools.javac.comp.Attr.attribType(Lcom/sun/tools/javac/tree/Tree;Lcom/sun/tools/javac/comp/Env;)Lcom/sun/tools/javac/code/Type;+7
+j  com.sun.tools.javac.comp.Attr.attribBase(Lcom/sun/tools/javac/tree/Tree;Lcom/sun/tools/javac/comp/Env;ZZZ)Lcom/sun/tools/javac/code/Type;+3
+j  com.sun.tools.javac.comp.MemberEnter.complete(Lcom/sun/tools/javac/code/Symbol;)V+217
+j  com.sun.tools.javac.code.Symbol.complete()V+19
+j  com.sun.tools.javac.code.Symbol$ClassSymbol.complete()V+1
+j  com.sun.tools.javac.code.Symbol$ClassSymbol.flags()J+8
+j  com.sun.tools.javac.comp.Resolve.isAccessible(Lcom/sun/tools/javac/comp/Env;Lcom/sun/tools/javac/code/Symbol$TypeSymbol;)Z+1
+j  com.sun.tools.javac.comp.Resolve.loadClass(Lcom/sun/tools/javac/comp/Env;Lcom/sun/tools/javac/util/Name;)Lcom/sun/tools/javac/code/Symbol;+12
+j  com.sun.tools.javac.comp.Resolve.findIdentInPackage(Lcom/sun/tools/javac/comp/Env;Lcom/sun/tools/javac/code/Symbol$TypeSymbol;Lcom/sun/tools/javac/util/Name;I)Lcom/sun/tools/javac/code/Symbol;+56
+j  com.sun.tools.javac.comp.Attr.selectSym(Lcom/sun/tools/javac/tree/Tree$Select;Lcom/sun/tools/javac/code/Type;Lcom/sun/tools/javac/comp/Env;Lcom/sun/tools/javac/code/Type;I)Lcom/sun/tools/javac/code/Symbol;+89
+j  com.sun.tools.javac.comp.Attr.visitSelect(Lcom/sun/tools/javac/tree/Tree$Select;)V+338
+j  com.sun.tools.javac.tree.Tree$Select.accept(Lcom/sun/tools/javac/tree/Tree$Visitor;)V+2
+j  com.sun.tools.javac.comp.Attr.attribTree(Lcom/sun/tools/javac/tree/Tree;Lcom/sun/tools/javac/comp/Env;ILcom/sun/tools/javac/code/Type;)Lcom/sun/tools/javac/code/Type;+36
+j  com.sun.tools.javac.comp.Attr.attribType(Lcom/sun/tools/javac/tree/Tree;Lcom/sun/tools/javac/comp/Env;)Lcom/sun/tools/javac/code/Type;+7
+j  com.sun.tools.javac.comp.Attr.attribBase(Lcom/sun/tools/javac/tree/Tree;Lcom/sun/tools/javac/comp/Env;ZZZ)Lcom/sun/tools/javac/code/Type;+3
+j  com.sun.tools.javac.comp.MemberEnter.complete(Lcom/sun/tools/javac/code/Symbol;)V+217
+j  com.sun.tools.javac.code.Symbol.complete()V+19
+j  com.sun.tools.javac.code.Symbol$ClassSymbol.complete()V+1
+j  com.sun.tools.javac.comp.Enter.complete(Lcom/sun/tools/javac/util/List;Lcom/sun/tools/javac/code/Symbol$ClassSymbol;)V+88
+j  com.sun.tools.javac.comp.Enter.main(Lcom/sun/tools/javac/util/List;)V+3
+j  com.sun.tools.javac.main.JavaCompiler.compile(Lcom/sun/tools/javac/util/List;)Lcom/sun/tools/javac/util/List;+109
+j  com.sun.tools.javac.main.Main.compile([Ljava/lang/String;Lcom/sun/tools/javac/util/Context;)I+248
+j  com.sun.tools.javac.main.Main.compile([Ljava/lang/String;)I+9
+j  com.sun.tools.javac.Main.compile([Ljava/lang/String;)I+12
+j  com.sun.tools.javac.Main$1.run()V+4
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000040f4f6c0 JavaThread "DestroyJavaVM" [_thread_blocked, id=1607]
+=>0x000000004103c780 JavaThread "Thread-0" [_thread_in_native, id=1619]
+  0x0000000041003990 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=1617]
+  0x0000000041001f30 JavaThread "CompilerThread1" daemon [_thread_blocked, id=1616]
+  0x0000000041000b90 JavaThread "CompilerThread0" daemon [_thread_blocked, id=1615]
+  0x0000000040fff7c0 JavaThread "AdapterThread" daemon [_thread_blocked, id=1614]
+  0x0000000040ffe500 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=1613]
+  0x0000000040fed0e0 JavaThread "Finalizer" daemon [_thread_blocked, id=1612]
+  0x0000000040fec8e0 JavaThread "Reference Handler" daemon [_thread_blocked, id=1611]
+
+Other Threads:
+  0x0000000040fe8550 VMThread [id=1610]
+  0x0000000041005550 WatcherThread [id=1618]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 283968K, used 283611K [0x00007f5be1e60000, 0x00007f5bf5270000, 0x00007f5bf73b0000)
+  eden space 252480K,  99% used [0x00007f5be1e60000, 0x00007f5bf14efff8, 0x00007f5bf14f0000)
+  from space 31488K,  98% used [0x00007f5bf33b0000, 0x00007f5bf5216cb0, 0x00007f5bf5270000)
+  to   space 31488K,   0% used [0x00007f5bf14f0000, 0x00007f5bf14f0000, 0x00007f5bf33b0000)
+ tenured generation   total 678376K, used 678375K [0x00007f5bf73b0000, 0x00007f5c20a2a000, 0x00007f5c21e60000)
+   the space 678376K,  99% used [0x00007f5bf73b0000, 0x00007f5c20a29fd8, 0x00007f5c20a2a000, 0x00007f5c20a2a000)
+ compacting perm gen  total 21248K, used 5081K [0x00007f5c21e60000, 0x00007f5c23320000, 0x00007f5c27260000)
+   the space 21248K,  23% used [0x00007f5c21e60000, 0x00007f5c22356418, 0x00007f5c22356600, 0x00007f5c23320000)
+No shared spaces configured.
+
+Dynamic libraries:
+40000000-4000d000 r-xp 00000000 08:01 2359317                            /java/jdk/jdk1.5.0_22/bin/javac
+4010c000-40110000 rwxp 0000c000 08:01 2359317                            /java/jdk/jdk1.5.0_22/bin/javac
+40f48000-41047000 rwxp 00000000 00:00 0                                  [heap]
+7f5bbc000000-7f5bbc0dc000 rwxp 00000000 00:00 0 
+7f5bbc0dc000-7f5bc0000000 ---p 00000000 00:00 0 
+7f5bc3546000-7f5bc3549000 ---p 00000000 00:00 0 
+7f5bc3549000-7f5bc3947000 rwxp 00000000 00:00 0                          [stack:1619]
+7f5bc3947000-7f5bc4000000 r-xs 00000000 08:01 2359300                    /java/jdk/jdk1.5.0_22/lib/tools.jar
+7f5bc4000000-7f5bc4962000 rwxp 00000000 00:00 0 
+7f5bc4962000-7f5bc8000000 ---p 00000000 00:00 0 
+7f5bc8000000-7f5bc8688000 rwxp 00000000 00:00 0 
+7f5bc8688000-7f5bcc000000 ---p 00000000 00:00 0 
+7f5bcc000000-7f5bcc021000 rwxp 00000000 00:00 0 
+7f5bcc021000-7f5bd0000000 ---p 00000000 00:00 0 
+7f5bd0000000-7f5bd0021000 rwxp 00000000 00:00 0 
+7f5bd0021000-7f5bd4000000 ---p 00000000 00:00 0 
+7f5bd4000000-7f5bd4021000 rwxp 00000000 00:00 0 
+7f5bd4021000-7f5bd8000000 ---p 00000000 00:00 0 
+7f5bd8000000-7f5bd8021000 rwxp 00000000 00:00 0 
+7f5bd8021000-7f5bdc000000 ---p 00000000 00:00 0 
+7f5bdc000000-7f5bdc103000 rwxp 00000000 00:00 0 
+7f5bdc103000-7f5be0000000 ---p 00000000 00:00 0 
+7f5be0335000-7f5be0360000 r-xs 00000000 08:01 2359824                    /java/jdk/jdk1.5.0_22/jre/lib/ext/sunpkcs11.jar
+7f5be0360000-7f5be0426000 r-xs 00000000 08:01 2359911                    /java/jdk/jdk1.5.0_22/jre/lib/ext/localedata.jar
+7f5be0426000-7f5be044d000 r-xs 00000000 08:01 2359825                    /java/jdk/jdk1.5.0_22/jre/lib/ext/sunjce_provider.jar
+7f5be044d000-7f5be044e000 ---p 00000000 00:00 0 
+7f5be044e000-7f5be054e000 rwxp 00000000 00:00 0                          [stack:1618]
+7f5be054e000-7f5be0551000 ---p 00000000 00:00 0 
+7f5be0551000-7f5be094f000 rwxp 00000000 00:00 0                          [stack:1617]
+7f5be094f000-7f5be0952000 ---p 00000000 00:00 0 
+7f5be0952000-7f5be0a50000 rwxp 00000000 00:00 0                          [stack:1616]
+7f5be0a50000-7f5be0a53000 ---p 00000000 00:00 0 
+7f5be0a53000-7f5be0b51000 rwxp 00000000 00:00 0                          [stack:1615]
+7f5be0b51000-7f5be0b54000 ---p 00000000 00:00 0 
+7f5be0b54000-7f5be0c52000 rwxp 00000000 00:00 0                          [stack:1614]
+7f5be0c52000-7f5be0c55000 ---p 00000000 00:00 0 
+7f5be0c55000-7f5be1053000 rwxp 00000000 00:00 0                          [stack:1613]
+7f5be1053000-7f5be11dc000 r-xp 00000000 08:01 35549                      /usr/lib/locale/locale-archive
+7f5be11dc000-7f5be11df000 ---p 00000000 00:00 0 
+7f5be11df000-7f5be15dd000 rwxp 00000000 00:00 0                          [stack:1612]
+7f5be15dd000-7f5be15e0000 ---p 00000000 00:00 0 
+7f5be15e0000-7f5be19de000 rwxp 00000000 00:00 0                          [stack:1611]
+7f5be19de000-7f5be19df000 ---p 00000000 00:00 0 
+7f5be19df000-7f5be1c2b000 rwxp 00000000 00:00 0                          [stack:1610]
+7f5be1c2b000-7f5be1c35000 rwxp 00000000 00:00 0 
+7f5be1c35000-7f5be1cd0000 rwxp 00000000 00:00 0 
+7f5be1cd0000-7f5be1cdf000 rwxp 00000000 00:00 0 
+7f5be1cdf000-7f5be1e2b000 rwxp 00000000 00:00 0 
+7f5be1e2b000-7f5be1e35000 rwxp 00000000 00:00 0 
+7f5be1e35000-7f5be1e40000 rwxp 00000000 00:00 0 
+7f5be1e40000-7f5be1e5f000 rwxp 00000000 00:00 0 
+7f5be1e5f000-7f5bf5270000 rwxp 00000000 00:00 0 
+7f5bf5270000-7f5bf73b0000 rwxp 00000000 00:00 0 
+7f5bf73b0000-7f5c20a2a000 rwxp 00000000 00:00 0 
+7f5c21e60000-7f5c23320000 rwxp 00000000 00:00 0 
+7f5c23320000-7f5c27260000 rwxp 00000000 00:00 0 
+7f5c27260000-7f5c27261000 r-xs 00000000 08:01 655371                     /apache-ant-1.6.5/lib/ant-xslp.jar
+7f5c27261000-7f5c27262000 r-xs 00000000 08:01 655385                     /apache-ant-1.6.5/lib/ant-apache-log4j.jar
+7f5c27262000-7f5c27263000 r-xs 00000000 08:01 655370                     /apache-ant-1.6.5/lib/ant-apache-regexp.jar
+7f5c27263000-7f5c2726f000 r-xs 00000000 00:19 72302                      /vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/WebApp/WEB-INF/lib/activation.jar
+7f5c2726f000-7f5c27279000 rwxp 00000000 00:00 0 
+7f5c27279000-7f5c2732f000 rwxp 00000000 00:00 0 
+7f5c2732f000-7f5c2759f000 rwxp 00000000 00:00 0 
+7f5c2759f000-7f5c2a32f000 rwxp 00000000 00:00 0 
+7f5c2a32f000-7f5c2abac000 r-xs 00000000 08:01 2359904                    /java/jdk/jdk1.5.0_22/jre/lib/charsets.jar
+7f5c2abac000-7f5c2ac31000 r-xs 00000000 08:01 2359898                    /java/jdk/jdk1.5.0_22/jre/lib/jsse.jar
+7f5c2ac31000-7f5c2d290000 r-xs 00000000 08:01 2359956                    /java/jdk/jdk1.5.0_22/jre/lib/rt.jar
+7f5c2d290000-7f5c2d29e000 r-xp 00000000 08:01 2359848                    /java/jdk/jdk1.5.0_22/jre/lib/amd64/libzip.so
+7f5c2d29e000-7f5c2d3a0000 ---p 0000e000 08:01 2359848                    /java/jdk/jdk1.5.0_22/jre/lib/amd64/libzip.so
+7f5c2d3a0000-7f5c2d3a4000 rwxp 00010000 08:01 2359848                    /java/jdk/jdk1.5.0_22/jre/lib/amd64/libzip.so
+7f5c2d3a4000-7f5c2d3c8000 r-xp 00000000 08:01 2359859                    /java/jdk/jdk1.5.0_22/jre/lib/amd64/libjava.so
+7f5c2d3c8000-7f5c2d4c8000 ---p 00024000 08:01 2359859                    /java/jdk/jdk1.5.0_22/jre/lib/amd64/libjava.so
+7f5c2d4c8000-7f5c2d4ce000 rwxp 00024000 08:01 2359859                    /java/jdk/jdk1.5.0_22/jre/lib/amd64/libjava.so
+7f5c2d4ce000-7f5c2d4db000 r-xp 00000000 08:01 2359842                    /java/jdk/jdk1.5.0_22/jre/lib/amd64/libverify.so
+7f5c2d4db000-7f5c2d5da000 ---p 0000d000 08:01 2359842                    /java/jdk/jdk1.5.0_22/jre/lib/amd64/libverify.so
+7f5c2d5da000-7f5c2d5dd000 rwxp 0000c000 08:01 2359842                    /java/jdk/jdk1.5.0_22/jre/lib/amd64/libverify.so
+7f5c2d5dd000-7f5c2d5e8000 r-xp 00000000 08:01 2180                       /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f5c2d5e8000-7f5c2d7e7000 ---p 0000b000 08:01 2180                       /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f5c2d7e7000-7f5c2d7e8000 r-xp 0000a000 08:01 2180                       /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f5c2d7e8000-7f5c2d7e9000 rwxp 0000b000 08:01 2180                       /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f5c2d7e9000-7f5c2d7f4000 r-xp 00000000 08:01 2122                       /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f5c2d7f4000-7f5c2d9f3000 ---p 0000b000 08:01 2122                       /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f5c2d9f3000-7f5c2d9f4000 r-xp 0000a000 08:01 2122                       /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f5c2d9f4000-7f5c2d9f5000 rwxp 0000b000 08:01 2122                       /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f5c2d9f5000-7f5c2d9fe000 r-xp 00000000 08:01 2178                       /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f5c2d9fe000-7f5c2dbfd000 ---p 00009000 08:01 2178                       /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f5c2dbfd000-7f5c2dbfe000 r-xp 00008000 08:01 2178                       /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f5c2dbfe000-7f5c2dbff000 rwxp 00009000 08:01 2178                       /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f5c2dbff000-7f5c2dc16000 r-xp 00000000 08:01 2218                       /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f5c2dc16000-7f5c2de15000 ---p 00017000 08:01 2218                       /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f5c2de15000-7f5c2de16000 r-xp 00016000 08:01 2218                       /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f5c2de16000-7f5c2de17000 rwxp 00017000 08:01 2218                       /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f5c2de17000-7f5c2de19000 rwxp 00000000 00:00 0 
+7f5c2de19000-7f5c2df1e000 r-xp 00000000 08:01 2236                       /lib/x86_64-linux-gnu/libm-2.19.so
+7f5c2df1e000-7f5c2e11d000 ---p 00105000 08:01 2236                       /lib/x86_64-linux-gnu/libm-2.19.so
+7f5c2e11d000-7f5c2e11e000 r-xp 00104000 08:01 2236                       /lib/x86_64-linux-gnu/libm-2.19.so
+7f5c2e11e000-7f5c2e11f000 rwxp 00105000 08:01 2236                       /lib/x86_64-linux-gnu/libm-2.19.so
+7f5c2e11f000-7f5c2e7fc000 r-xp 00000000 08:01 2359864                    /java/jdk/jdk1.5.0_22/jre/lib/amd64/server/libjvm.so
+7f5c2e7fc000-7f5c2e8fb000 ---p 006dd000 08:01 2359864                    /java/jdk/jdk1.5.0_22/jre/lib/amd64/server/libjvm.so
+7f5c2e8fb000-7f5c2ea78000 rwxp 006dc000 08:01 2359864                    /java/jdk/jdk1.5.0_22/jre/lib/amd64/server/libjvm.so
+7f5c2ea78000-7f5c2eaa7000 rwxp 00000000 00:00 0 
+7f5c2eaa7000-7f5c2ec63000 r-xp 00000000 08:01 2162                       /lib/x86_64-linux-gnu/libc-2.19.so
+7f5c2ec63000-7f5c2ee62000 ---p 001bc000 08:01 2162                       /lib/x86_64-linux-gnu/libc-2.19.so
+7f5c2ee62000-7f5c2ee66000 r-xp 001bb000 08:01 2162                       /lib/x86_64-linux-gnu/libc-2.19.so
+7f5c2ee66000-7f5c2ee68000 rwxp 001bf000 08:01 2162                       /lib/x86_64-linux-gnu/libc-2.19.so
+7f5c2ee68000-7f5c2ee6d000 rwxp 00000000 00:00 0 
+7f5c2ee6d000-7f5c2ee70000 r-xp 00000000 08:01 2203                       /lib/x86_64-linux-gnu/libdl-2.19.so
+7f5c2ee70000-7f5c2f06f000 ---p 00003000 08:01 2203                       /lib/x86_64-linux-gnu/libdl-2.19.so
+7f5c2f06f000-7f5c2f070000 r-xp 00002000 08:01 2203                       /lib/x86_64-linux-gnu/libdl-2.19.so
+7f5c2f070000-7f5c2f071000 rwxp 00003000 08:01 2203                       /lib/x86_64-linux-gnu/libdl-2.19.so
+7f5c2f071000-7f5c2f08a000 r-xp 00000000 08:01 2204                       /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f5c2f08a000-7f5c2f289000 ---p 00019000 08:01 2204                       /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f5c2f289000-7f5c2f28a000 r-xp 00018000 08:01 2204                       /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f5c2f28a000-7f5c2f28b000 rwxp 00019000 08:01 2204                       /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f5c2f28b000-7f5c2f28f000 rwxp 00000000 00:00 0 
+7f5c2f28f000-7f5c2f2b2000 r-xp 00000000 08:01 2173                       /lib/x86_64-linux-gnu/ld-2.19.so
+7f5c2f2b2000-7f5c2f2b5000 r-xs 00000000 08:01 655393                     /apache-ant-1.6.5/lib/ant-launcher.jar
+7f5c2f2b5000-7f5c2f2bf000 r-xs 00000000 00:19 72377                      /vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/WebApp/WEB-INF/lib/configflag.jar
+7f5c2f2bf000-7f5c2f2f2000 rwxp 00000000 00:00 0 
+7f5c2f2f2000-7f5c2f312000 rwxp 00000000 00:00 0 
+7f5c2f312000-7f5c2f327000 r-xs 00000000 08:01 2359945                    /java/jdk/jdk1.5.0_22/jre/lib/jce.jar
+7f5c2f327000-7f5c2f391000 rwxp 00000000 00:00 0 
+7f5c2f391000-7f5c2f399000 rwxs 00000000 08:01 140427                     /tmp/hsperfdata_vagrant/1607
+7f5c2f399000-7f5c2f3a0000 r-xp 00000000 08:01 2359850                    /java/jdk/jdk1.5.0_22/jre/lib/amd64/native_threads/libhpi.so
+7f5c2f3a0000-7f5c2f4a1000 ---p 00007000 08:01 2359850                    /java/jdk/jdk1.5.0_22/jre/lib/amd64/native_threads/libhpi.so
+7f5c2f4a1000-7f5c2f4a4000 rwxp 00008000 08:01 2359850                    /java/jdk/jdk1.5.0_22/jre/lib/amd64/native_threads/libhpi.so
+7f5c2f4a4000-7f5c2f4a8000 rwxp 00000000 00:00 0 
+7f5c2f4a8000-7f5c2f4aa000 r-xs 00000000 08:01 655389                     /apache-ant-1.6.5/lib/ant-jmf.jar
+7f5c2f4aa000-7f5c2f4ad000 r-xs 00000000 08:01 2359822                    /java/jdk/jdk1.5.0_22/jre/lib/ext/dnsns.jar
+7f5c2f4ad000-7f5c2f4ae000 rwxp 00000000 00:00 0 
+7f5c2f4ae000-7f5c2f4af000 r-xp 00000000 00:00 0 
+7f5c2f4af000-7f5c2f4b1000 rwxp 00000000 00:00 0 
+7f5c2f4b1000-7f5c2f4b2000 r-xp 00022000 08:01 2173                       /lib/x86_64-linux-gnu/ld-2.19.so
+7f5c2f4b2000-7f5c2f4b3000 rwxp 00023000 08:01 2173                       /lib/x86_64-linux-gnu/ld-2.19.so
+7f5c2f4b3000-7f5c2f4b4000 rwxp 00000000 00:00 0 
+7fffdb4c6000-7fffdb4c9000 ---p 00000000 00:00 0 
+7fffdb4ca000-7fffdb6c6000 rwxp 00000000 00:00 0                          [stack]
+7fffdb7fe000-7fffdb800000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Dapplication.home=/java/jdk/jdk1.5.0_22 -Xms8m -Xss4m -ea:com.sun.tools... -Xms256m -Xmx1g
+java_command: com.sun.tools.javac.Main -d /vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/ValueObjects/bin -classpath /vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/ValueObjects/bin:/vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/WebApp/WEB-INF/lib/framework.jar:/vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/WebApp/WEB-INF/lib/base.jar:/vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/WebApp/WEB-INF/lib/domain.jar:/vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/WebApp/WEB-INF/lib/configflag.jar:/vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/WebApp/WEB-INF/lib/mail.jar:/vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/WebApp/WEB-INF/lib/activation.jar:/vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/WebApp/WEB-INF/lib/dom4j.jar:/vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/WebApp/WEB-INF/lib/log4j.jar:/vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/WebApp/WEB-INF/lib/SQLServerJdbc.jar:/vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/WebApp/WEB-INF/lib/OracleJdbc.jar:/vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/WebApp/WEB-INF/lib/hsqldb.jar:/vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/WebApp/WEB-INF/lib/ImsQueryBuilderClient.jar:/vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/WebApp/WEB-INF/lib/hibernate3.jar:/vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/WebApp/WEB-INF/lib/hapi.jar:/vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/WebApp/WEB-INF/lib/flatpack-3.1.1.jar:/vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/WebApp/WEB-INF/lib/itext.jar:/vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/WebApp/WEB-INF/lib/hl7utils.jar:/vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/WebApp/WEB-INF/lib/commons-io-1.4.jar:/vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/WebApp/WEB-INF/lib/jamon-2.2.jar:/vagrant/openMAXIMS_01_MAY_2
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/java/jdk/jdk1.5.0_22/jre
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/java/jdk/jdk1.5.0_22/bin:/apache-ant-1.6.5/bin
+LD_LIBRARY_PATH=/java/jdk/jdk1.5.0_22/jre/lib/amd64/server:/java/jdk/jdk1.5.0_22/jre/lib/amd64:/java/jdk/jdk1.5.0_22/jre/../lib/amd64
+SHELL=/bin/bash
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x668110], sa_mask[0]=0x7ffbfeff, sa_flags=0x14000004
+SIGBUS: [libjvm.so+0x668110], sa_mask[0]=0x7ffbfeff, sa_flags=0x14000004
+SIGFPE: [libjvm.so+0x56e860], sa_mask[0]=0x7ffbfeff, sa_flags=0x14000004
+SIGPIPE: [libjvm.so+0x56e860], sa_mask[0]=0x7ffbfeff, sa_flags=0x14000004
+SIGILL: [libjvm.so+0x56e860], sa_mask[0]=0x7ffbfeff, sa_flags=0x14000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x570710], sa_mask[0]=0x00000004, sa_flags=0x14000004
+SIGHUP: [libjvm.so+0x5701e0], sa_mask[0]=0x7ffbfeff, sa_flags=0x14000004
+SIGINT: [libjvm.so+0x5701e0], sa_mask[0]=0x7ffbfeff, sa_flags=0x14000004
+SIGQUIT: [libjvm.so+0x5701e0], sa_mask[0]=0x7ffbfeff, sa_flags=0x14000004
+SIGTERM: [libjvm.so+0x5701e0], sa_mask[0]=0x7ffbfeff, sa_flags=0x14000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:jessie/sid
+
+uname:Linux 3.13.0-29-generic #53-Ubuntu SMP Wed Jun 4 21:00:20 UTC 2014 x86_64
+libc:glibc 2.19 NPTL 2.19 
+rlimit: STACK 8192k, CORE 0k, NPROC 9890, NOFILE 4096, AS infinity
+load average:1.00 1.01 0.95
+
+CPU:total 1 em64t
+
+Memory: 4k page, physical 1275928k(66040k free), swap 0k(0k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (1.5.0_22-b03) for linux-amd64, built on Oct  9 2009 01:32:14 by java_re with gcc 3.2.2 (SuSE Linux)
+
+time: Fri Jun 13 22:26:40 2014
+elapsed time: 2179 seconds
+
