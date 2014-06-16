@@ -22,3 +22,6 @@ a fork of openMAXIMS open EPR/ADT/order-comms project, adapted to compile in a l
 * saved /home/marcus/VMs/imsmaxims-vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/Admin/src/ims/admin/helper/Keywords.java in UTF-8 encoding
 * realised there might be a lot more UTF-8 re-encoding required as other compiler error messages came in, therefore I put the whole lot into version control
 * `<deep_breath />`
+* re-encoded as UTF-8 all .java files that the compiler couldn't compile due to charset encoding issues (these were mainly Logic.java files). I considered a job-lot re-encoding to UTF-8 but thought this might break stuff so I just re-encoded the stuff that was failing.
+* CAREUK/src missing - I have raised this as an issue on openMAXIMS' GitHub repo, and for now as a workaround I've commented out all references to CAREUK in the WebAppBuild.xml build file. I'm not sure what effect the absence of CAREUK from the final build will have... ;-)
+* 
