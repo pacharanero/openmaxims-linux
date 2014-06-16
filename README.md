@@ -14,7 +14,7 @@ a fork of openMAXIMS open EPR/ADT/order-comms project, adapted to compile in a l
 * followed build environment instructions in README.TXT
 * decided probably easier to add SETENV.bat content to .bash_profile or similar linux env file rather than converting SETENV.bat into another Bash script
 * edited /vagrant/openMAXIMS_01_MAY_2014_Source/build_openMAXIMS.bat:
-  * edited contents to work with Linux (forward slashes and case-sensitivity)
+	* edited contents to work with Linux (forward slashes and case-sensitivity)
 		* `#! /bin/bash`
 		* `cd ./openmaxims_workspace/WebApp`
 		* `ant -f WebAppBuild.xml`
