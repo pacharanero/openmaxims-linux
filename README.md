@@ -5,7 +5,7 @@ a fork of openMAXIMS open EPR/ADT/order-comms project, adapted to compile in a l
 
 ###So Far:
 * setup vagrant base box ubuntu trusty server 32
-* ensured enough cpu resources and RAM allocated to the VM (I had problems with insufficient resources and RAM allocated, see also Swapfil comment) 
+* ensured enough cpu resources and RAM allocated to the VM (I initially had problems with insufficient resources and RAM allocated, see also Swapfile comment) 
 * `vagrant up`
 * `vagrant ssh`
 * added swapfile (I enabled a decent sized Swapfile, this is not part of a normal Vagrant Base box but helps out with large transient RAM requirements)
@@ -21,4 +21,4 @@ a fork of openMAXIMS open EPR/ADT/order-comms project, adapted to compile in a l
 	* renamed to build_openMAXIMS.sh
 * saved /home/marcus/VMs/imsmaxims-vagrant/openMAXIMS_01_MAY_2014_Source/openmaxims_workspace/Admin/src/ims/admin/helper/Keywords.java in UTF-8 encoding
 * realised there might be a lot more UTF-8 re-encoding required as other compiler error messages came in, therefore I put the whole lot into version control
-* <deep breath />
+* `<deep_breath />`
