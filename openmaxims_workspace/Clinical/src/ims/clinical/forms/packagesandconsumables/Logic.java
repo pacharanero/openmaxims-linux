@@ -88,7 +88,7 @@ public class Logic extends BaseLogic
 				if (((String)args[1]).equals("Consumables"))
 				{
 					grd1Row row = form.grd1().getRows().newRow();
-					row.setColumn1("<b>B0000010</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Diathermy Plate with lead – Adult");
+					row.setColumn1("<b>B0000010</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Diathermy Plate with lead â€“ Adult");
 					row.setColumn2(true);
 					
 					row = form.grd1().getRows().newRow();
@@ -112,7 +112,7 @@ public class Logic extends BaseLogic
 					row.setColumn2(true);
 					
 					row = form.grd1().getRows().newRow();
-					row.setColumn1("<b>B0000070</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Surgical stockings – small, medium, large");
+					row.setColumn1("<b>B0000070</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Surgical stockings â€“ small, medium, large");
 					row.setColumn2(true);
 					
 					row = form.grd1().getRows().newRow();
@@ -120,15 +120,15 @@ public class Logic extends BaseLogic
 					row.setColumn2(true);
 					
 					row = form.grd1().getRows().newRow();
-					row.setColumn1("<b>B0000090</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tubigrip – A – F");
+					row.setColumn1("<b>B0000090</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tubigrip â€“ A â€“ F");
 					row.setColumn2(true);
 					
 					row = form.grd1().getRows().newRow();
-					row.setColumn1("<b>B0000100</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Blood transfusion – 2 units");
+					row.setColumn1("<b>B0000100</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Blood transfusion â€“ 2 units");
 					row.setColumn2(true);
 					
 					row = form.grd1().getRows().newRow();
-					row.setColumn1("<b>B0000110</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IV fluids – Normal Saline, Dextrose Saline");
+					row.setColumn1("<b>B0000110</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IV fluids â€“ Normal Saline, Dextrose Saline");
 					row.setColumn2(true);
 				}
 				else if (((String)args[1]).equals("Drugs"))

@@ -287,7 +287,7 @@ public class Logic extends BaseLogic
 		row.setColHRGCode(hrgConfiguration.getHRGCode());
 		row.setColHRGDescription(hrgConfiguration.getHRGDescription());
 		
-		String cost = "£ " + (hrgConfiguration.getCostPounds() == null ? "0." : hrgConfiguration.getCostPounds().toString() + ".") + (hrgConfiguration.getCostPence() == null ? "0" : hrgConfiguration.getCostPence().toString());
+		String cost = "Â£ " + (hrgConfiguration.getCostPounds() == null ? "0." : hrgConfiguration.getCostPounds().toString() + ".") + (hrgConfiguration.getCostPence() == null ? "0" : hrgConfiguration.getCostPence().toString());
 		row.setColCost(cost);
 	}
 	

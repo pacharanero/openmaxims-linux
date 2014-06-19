@@ -2342,7 +2342,7 @@ public class DemographicsImpl extends DTODomainImplementation implements ims.cor
 		
 		//wdev-15845
 		if( result != null && result.getId() == -7 )
-			throw new DomainInterfaceException("Demographics details cannot be edited –- Please contact the system administrator with the details for this patient");
+			throw new DomainInterfaceException("Demographics details cannot be edited â€“- Please contact the system administrator with the details for this patient");
 		//-------------
 		
 		if(result != null 

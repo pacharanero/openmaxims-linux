@@ -140,7 +140,7 @@ public class O02VoMapper extends VoMapper
 			// ORC-10   Entered by   (XCN)   00224
 			renderMemberOfStaffShortVoToXCN(orderVo.getOrderedBy(), commonOrder.getEnteredBy(0),responseVo.getProviderSystem());
 
-			// ORC-13   Enterer’s location   (PL)   00227 
+			// ORC-13   Entererâ€™s location   (PL)   00227 
 			if (orderVo.getOrderedBy().getPrimaryLocationIsNotNull())
 			{
 				commonOrder.getEntererSLocation().getLocationDescription().setValue(orderVo.getOrderedBy().getPrimaryLocation().getName());
@@ -265,7 +265,7 @@ public class O02VoMapper extends VoMapper
 			// ORC-10   Entered by   (XCN)   00224
 			renderMemberOfStaffShortVoToXCN(orderVo.getOrderedBy(), commonOrder.getEnteredBy(0),event.getProviderSystem());
 
-			// ORC-13   Enterer’s location   (PL)   00227 
+			// ORC-13   Entererâ€™s location   (PL)   00227 
 			if (orderVo.getOrderedBy().getPrimaryLocationIsNotNull())
 			{
 				commonOrder.getEntererSLocation().getLocationDescription().setValue(orderVo.getOrderedBy().getPrimaryLocation().getName());

@@ -279,7 +279,7 @@ public class Logic extends BaseLogic
 				{
 					engine.showMessage(e.getMessage());
 					//wdev-15845
-					if(e.getMessage() != null && e.getMessage().equals("Demographics details cannot be edited –- Please contact the system administrator with the details for this patient"))
+					if(e.getMessage() != null && e.getMessage().equals("Demographics details cannot be edited â€“- Please contact the system administrator with the details for this patient"))
 					{
 						setDemographicDetailsCannotBeEdited(Boolean.TRUE);
 					}

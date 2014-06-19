@@ -822,7 +822,7 @@ public class ADTImpl extends DomainImpl implements ims.core.domain.ADT, ims.doma
 			}
 
 			// It was agreed to leave the discharge details (as displayed on Ready to Leave) as is if the
-			// discharge letter was generated – the customer will have to use the supplementary details to 
+			// discharge letter was generated â€“ the customer will have to use the supplementary details to 
 			// send any letters to GP to reflect any new discharge details.. We will only set these list of
 			// fields that I listed on the Ready To Leave to NULL when no discharge letter was generated.
 			if (domSummary != null && (domSummary.getDischargeDocuments()== null || domSummary.getDischargeDocuments().size() == 0))

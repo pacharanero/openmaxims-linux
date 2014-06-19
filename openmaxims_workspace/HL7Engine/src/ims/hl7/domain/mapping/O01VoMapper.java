@@ -656,7 +656,7 @@ public class O01VoMapper extends VoMapper
 	{
 		LOG.debug("O01VoMapper renderOrder: entry");
 
-		// OBR-1   Set ID – OBR   (SI)
+		// OBR-1   Set ID â€“ OBR   (SI)
 		obr.getSetIDOBR().setValue(String.valueOf(id+1));
 
 		// OBR-2   Placer order number   (EI)   00216
@@ -705,7 +705,7 @@ public class O01VoMapper extends VoMapper
 			// ORC-10   Entered by   (XCN)   00224
 			renderMemberOfStaffShortVoToXCN(newOrder.getOrderedBy(), commonOrder.getEnteredBy(0),providerSystem);
 
-			// ORC-13   Enterer’s location   (PL)   00227 
+			// ORC-13   Entererâ€™s location   (PL)   00227 
 			if (newOrder.getOrderedBy().getPrimaryLocationIsNotNull())
 			{
 				commonOrder.getEntererSLocation().getLocationDescription().setValue(newOrder.getOrderedBy().getPrimaryLocation().getName());
@@ -919,7 +919,7 @@ public class O01VoMapper extends VoMapper
 			obr.getDiagnosticServSectID().setValue(extMapping);
 		}
 		
-		// OBR-39   Collector’s comment   (CE)  
+		// OBR-39   Collectorâ€™s comment   (CE)  
 		obr.getCollectorSComment(0).getText().setValue(specimen.getCollectorComment());
 		LOG.debug("O01VoMapper renderSpecimenToOBR: exit");
 
@@ -1042,7 +1042,7 @@ public class O01VoMapper extends VoMapper
 			// ORC-10   Entered by   (XCN)   00224
 			renderMemberOfStaffShortVoToXCN(orderVo.getOrderedBy(), commonOrder.getEnteredBy(0),event.getProviderSystem());
 
-			// ORC-13   Enterer’s location   (PL)   00227 
+			// ORC-13   Entererâ€™s location   (PL)   00227 
 			if (orderVo.getOrderedBy().getPrimaryLocationIsNotNull())
 			{
 				commonOrder.getEntererSLocation().getLocationDescription().setValue(orderVo.getOrderedBy().getPrimaryLocation().getName());
@@ -1165,7 +1165,7 @@ public class O01VoMapper extends VoMapper
 			obr.getRelevantClinicalInfo().setValue(HL7Utils.toHL7Text(addtNotes));
 		}
 		
-		// OBR-1   Set ID – OBR   (SI)
+		// OBR-1   Set ID â€“ OBR   (SI)
 		obr.getSetIDOBR().setValue(String.valueOf(0+1));
 
 		// OBR-2   Placer order number   (EI)   00216

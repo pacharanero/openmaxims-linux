@@ -176,7 +176,7 @@
 		<javac debug="on" classpath="${ant_classpath};${workspace}Admin/bin/;${workspace}DomainObjects/bin/;${workspace}ValueObjects/bin/;" destdir="${workspace}ClinicalAdmin/bin/" srcdir="${workspace}ClinicalAdmin/src/"  includes="**/*.java" />
 	</target>
 
-	<!-- Compile CAREUK-->
+	<!-- Compile CAREUK
 	<target name="CAREUK" depends="Admin, Core, Scheduling,OCS_IF,OCRR,ClinicalAdmin,Assessment,Pathways" >
 		<mkdir dir="${workspace}CAREUK/bin" />
 		<delete includeEmptyDirs="true" quiet="true">
@@ -187,7 +187,7 @@
 			</fileset>
 		</delete>																						
 		<javac debug="on" classpath="${ant_classpath};${libdir}QueryBuilder3.jar;${libdir}commons-io-1.4.jar;${libdir}commons-httpclient-3.0.jar;${workspace}DomainObjects/bin/;${workspace}ValueObjects/bin/;${workspace}ClinicalAdmin/bin/;${workspace}Admin/bin/;${workspace}Core/bin/;${workspace}Clinical/bin/;${workspace}Scheduling/bin/;${workspace}Pathways/bin/;${workspace}OCS_IF/bin/;${workspace}OCRR/bin/;${workspace}Assessment/bin/;" destdir="${workspace}CAREUK/bin/" srcdir="${workspace}CAREUK/src/"  includes="**/*.java" />
-	</target>
+	</target> -->
 
       <!-- Compile Scheduling-->
 	<target name="Scheduling" depends="Admin,Core,Pathways" >
@@ -267,7 +267,7 @@
 		<javac debug="on" classpath="${ant_classpath};${workspace}Core/bin/;${workspace}DomainObjects/bin/;${workspace}ValueObjects/bin/;" destdir="${workspace}Billing/bin/" srcdir="${workspace}Billing/src/"  includes="**/*.java" />
 	</target>
 
-	<!-- Compile Racpc -->
+	<!-- Compile Racpc >
 	<target name="Racpc" depends="Core, Clinical,Admin" >
 		<mkdir dir="${workspace}Racpc/bin" />
 		<delete includeEmptyDirs="true" quiet="true">
@@ -278,11 +278,11 @@
 			</fileset>
 		</delete>		
 		<javac debug="on" classpath="${ant_classpath};${workspace}Admin/bin/;${workspace}Alerts/bin/;${workspace}Core/bin/;${workspace}DomainObjects/bin/;${workspace}ValueObjects/bin/;${workspace}Clinical/bin/;" destdir="${workspace}Racpc/bin/" srcdir="${workspace}Racpc/src/"  includes="**/*.java" />
-	</target>
+	</target -->
 
 
 	<!-- Gather all War File dependencies -->
-	<target name="WarDependencies" depends="Core,ICP,Assessment,CAREUK,Nursing,COE,OCRR,OCS_IF,Therapies,Racpc,SpinalInjuries,Oncology,HL7Engine,Clinical,ClinicalAdmin,Correspondence,Pathways,Scheduling,Emergency,Billing,MappingFiles,WebAppFiles,WebAppSource" >
+	<target name="WarDependencies" depends="Core,ICP,Assessment,Nursing,COE,OCRR,OCS_IF,Therapies,SpinalInjuries,Oncology,HL7Engine,Clinical,ClinicalAdmin,Correspondence,Pathways,Scheduling,Emergency,Billing,MappingFiles,WebAppFiles,WebAppSource" >
 		<echo>All War File Dependencies have now be executed</echo>
 	</target>
 
@@ -335,7 +335,7 @@ ims.warfile.timestamp=${timestamp}
 			<classes dir="${workspace}OCRR/bin" />
 			<classes dir="${workspace}OCS_IF/bin" />
 			<classes dir="${workspace}Assessment/bin" />
-			<classes dir="${workspace}CAREUK/bin" />
+			<!-- classes dir="${workspace}CAREUK/bin"  -->
 			<classes dir="${workspace}Oncology/bin" />
      			<classes dir="${workspace}Clinical/bin" />
 			<classes dir="${workspace}ClinicalAdmin/bin" />
@@ -345,7 +345,7 @@ ims.warfile.timestamp=${timestamp}
 			<classes dir="${workspace}COE/bin" />
             	<classes dir="${workspace}Pathways/bin" />
 			<classes dir="${workspace}Scheduling/bin" />
-			<classes dir="${workspace}Racpc/bin" />
+			<!--classes dir="${workspace}Racpc/bin" -->
             	<classes dir="${workspace}Correspondence/bin" />
    	            <classes dir="${workspace}Emergency/bin" />
    	            <classes dir="${workspace}Billing/bin" />
@@ -370,9 +370,9 @@ ims.warfile.timestamp=${timestamp}
 		  <copy todir="${output_dir}\Billing\src">
 		    <fileset dir="${workspace}/Billing/src"/>
 		  </copy>
-		  <copy todir="${output_dir}\CAREUK\src">
-		    <fileset dir="${workspace}/CAREUK/src"/>
-		  </copy>
+		  <!--copy todir="${output_dir}\CAREUK\src">
+		    <fileset dir="${workspace}/CAREUK/src"/ >
+		  </copy -->
 		  <copy todir="${output_dir}\Clinical\src">
 		    <fileset dir="${workspace}/Clinical/src"/>
 		  </copy>
@@ -424,9 +424,9 @@ ims.warfile.timestamp=${timestamp}
 		 <copy todir="${output_dir}\Pathways\src">
 		    <fileset dir="${workspace}/Pathways/src"/>
 		  </copy>
-		 <copy todir="${output_dir}\RACPC\src">
+		 <!-- copy todir="${output_dir}\RACPC\src">
 		    <fileset dir="${workspace}/RACPC/src"/>
-		  </copy>
+		  </copy -->
 		 <copy todir="${output_dir}\Rules\src">
 		    <fileset dir="${workspace}/Rules/src"/>
 		  </copy>

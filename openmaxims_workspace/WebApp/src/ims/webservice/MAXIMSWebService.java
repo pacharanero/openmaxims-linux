@@ -636,18 +636,18 @@ public class MAXIMSWebService extends ims.domain.impl.DomainWebService
 			v_isRebook = isRebook;
 	}
 		
-		ims.careuk.domain.BookAppointment intf = (ims.careuk.domain.BookAppointment)super.getDomainImpl("ims.careuk.domain.impl.BookAppointmentImpl");		
+	//	ims.careuk.domain.BookAppointment intf = (ims.careuk.domain.BookAppointment)super.getDomainImpl("ims.careuk.domain.impl.BookAppointmentImpl");		
 
-	   ims.scheduling.vo.Sch_BookingVo ret = intf.saveBooking(
-												  v_booking 
-												 , v_catsReferral 
-												 , v_isRebook 
-                                           ); 
+	//   ims.scheduling.vo.Sch_BookingVo ret = intf.saveBooking(
+	//											  v_booking 
+	//											 , v_catsReferral 
+	//											 , v_isRebook 
+    //                                       ); 
 
 		//super.freeDomainImpl(intf);
-				if(ret == null)
+	//			if(ret == null)
 			return null;
-				return (ims.scheduling.vo.beans.Sch_BookingVoBean)ret.getBean();
+	//			return (ims.scheduling.vo.beans.Sch_BookingVoBean)ret.getBean();
 	}
 	public void processAppointmentForPukkaJ(
 
@@ -658,23 +658,23 @@ public class MAXIMSWebService extends ims.domain.impl.DomainWebService
 	{
 		if (!loggedIn()) throw new Exception("Not logged in!!");
 			
-	ims.careuk.vo.CatsReferralRefVo v_catsReferral=null;
-	    if (catsReferral != null)
-		{
-			v_catsReferral = catsReferral == null ? null : new ims.careuk.vo.CatsReferralRefVo(catsReferral.getId(), catsReferral.getVersion());
-	}
+	// ims.careuk.vo.CatsReferralRefVo v_catsReferral=null;
+	//    if (catsReferral != null)
+	//	{
+	//		v_catsReferral = catsReferral == null ? null : new ims.careuk.vo.CatsReferralRefVo(catsReferral.getId(), catsReferral.getVersion());
+	//}
 	ims.scheduling.vo.Booking_AppointmentRefVo v_appt=null;
 	    if (appt != null)
 		{
 			v_appt = appt == null ? null : new ims.scheduling.vo.Booking_AppointmentRefVo(appt.getId(), appt.getVersion());
 	}
 		
-		ims.careuk.domain.BookAppointment intf = (ims.careuk.domain.BookAppointment)super.getDomainImpl("ims.careuk.domain.impl.BookAppointmentImpl");		
+	//	ims.careuk.domain.BookAppointment intf = (ims.careuk.domain.BookAppointment)super.getDomainImpl("ims.careuk.domain.impl.BookAppointmentImpl");		
 
-	    intf.processAppointmentForPukkaJ(
-												  v_catsReferral 
-												 , v_appt 
-                                           ); 
+	//    intf.processAppointmentForPukkaJ(
+	//											  v_catsReferral 
+	//											 , v_appt 
+    //                                       ); 
 
 		//super.freeDomainImpl(intf);
 						
@@ -688,23 +688,23 @@ public class MAXIMSWebService extends ims.domain.impl.DomainWebService
 	{
 		if (!loggedIn()) throw new Exception("Not logged in!!");
 			
-	ims.careuk.vo.CatsReferralRefVo v_catsReferral=null;
-	    if (catsReferral != null)
-		{
-			v_catsReferral = catsReferral == null ? null : new ims.careuk.vo.CatsReferralRefVo(catsReferral.getId(), catsReferral.getVersion());
-	}
-	ims.scheduling.vo.Booking_AppointmentRefVo v_appt=null;
-	    if (appt != null)
-		{
-			v_appt = appt == null ? null : new ims.scheduling.vo.Booking_AppointmentRefVo(appt.getId(), appt.getVersion());
-	}
+	//ims.careuk.vo.CatsReferralRefVo v_catsReferral=null;
+	//    if (catsReferral != null)
+	//	{
+	//		v_catsReferral = catsReferral == null ? null : new ims.careuk.vo.CatsReferralRefVo(catsReferral.getId(), catsReferral.getVersion());
+	//}
+	//ims.scheduling.vo.Booking_AppointmentRefVo v_appt=null;
+	//    if (appt != null)
+	//	{
+	//		v_appt = appt == null ? null : new ims.scheduling.vo.Booking_AppointmentRefVo(appt.getId(), appt.getVersion());
+	//}
 		
-		ims.careuk.domain.BookAppointment intf = (ims.careuk.domain.BookAppointment)super.getDomainImpl("ims.careuk.domain.impl.BookAppointmentImpl");		
+	//	ims.careuk.domain.BookAppointment intf = (ims.careuk.domain.BookAppointment)super.getDomainImpl("ims.careuk.domain.impl.BookAppointmentImpl");		
 
-	    intf.cancelAppointmentForPukkaJ(
-												  v_catsReferral 
-												 , v_appt 
-                                           ); 
+	//    intf.cancelAppointmentForPukkaJ(
+	//											  v_catsReferral 
+	//											 , v_appt 
+    //                                       ); 
 
 		//super.freeDomainImpl(intf);
 						

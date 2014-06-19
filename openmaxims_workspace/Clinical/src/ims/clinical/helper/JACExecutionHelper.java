@@ -125,7 +125,7 @@ public class JACExecutionHelper
 		}
 			
 		
-		//	parm4 – is the outpatient clinic code (ONLY used for functions requiring a ward or clinic)
+		//	parm4 â€“ is the outpatient clinic code (ONLY used for functions requiring a ward or clinic)
 		if (szOutpatCode != null
 			&& szParameter != null
 			&& szParameter.matches("OUT"))
